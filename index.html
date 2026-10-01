@@ -20,7 +20,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Caveat:wght@600;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -32,34 +32,39 @@
     <img class="mark" src="assets/icon.svg" alt="" width="22" height="22">
     GO<em>(A)</em>LF
   </a>
-  <button class="nav-toggle" id="navBtn" aria-label="Menu" aria-expanded="false" aria-controls="navPanel">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="head-right">
+    <div class="lang" id="lang" role="group" aria-label="Language / 언어">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
+    </div>
+    <button class="nav-toggle" id="navBtn" aria-label="Menu" aria-expanded="false" aria-controls="navPanel">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
 <nav class="nav-panel" id="navPanel" aria-label="Main">
   <ol>
-    <li><a href="#concept"><span class="idx">01</span>Concept</a></li>
-    <li><a href="#how"><span class="idx">02</span>How It Works</a></li>
-    <li><a href="#interact"><span class="idx">03</span>Interaction</a></li>
-    <li><a href="#details"><span class="idx">04</span>Details</a></li>
-    <li><a href="#making"><span class="idx">05</span>Making Process</a></li>
-    <li><a href="#materials"><span class="idx">06</span>Materials</a></li>
-    <li><a href="#budget"><span class="idx">07</span>Budget</a></li>
-    <li><a href="#install"><span class="idx">08</span>Installation</a></li>
-    <li><a href="#posters"><span class="idx">09</span>Poster Sheets</a></li>
+    <li><a href="#concept" data-ko='<span class="idx">01</span>콘셉트'><span class="idx">01</span>Concept</a></li>
+    <li><a href="#how" data-ko='<span class="idx">02</span>이용 방법'><span class="idx">02</span>How It Works</a></li>
+    <li><a href="#interact" data-ko='<span class="idx">03</span>사람들의 이용'><span class="idx">03</span>Interaction</a></li>
+    <li><a href="#details" data-ko='<span class="idx">04</span>규격'><span class="idx">04</span>Details</a></li>
+    <li><a href="#making" data-ko='<span class="idx">05</span>제작 과정'><span class="idx">05</span>Making Process</a></li>
+    <li><a href="#materials" data-ko='<span class="idx">06</span>재료'><span class="idx">06</span>Materials</a></li>
+    <li><a href="#budget" data-ko='<span class="idx">07</span>예산'><span class="idx">07</span>Budget</a></li>
+    <li><a href="#install" data-ko='<span class="idx">08</span>설치 과정'><span class="idx">08</span>Installation</a></li>
+    <li><a href="#posters" data-ko='<span class="idx">09</span>포스터'><span class="idx">09</span>Poster Sheets</a></li>
   </ol>
-  <p class="nav-foot">University of Utah · Urban Ecology · Park(ing) Day</p>
+  <p class="nav-foot" data-ko="유타대학교 · 어반 에콜로지 · 파킹데이">University of Utah · Urban Ecology · Park(ing) Day</p>
 </nav>
 
 <main class="shell" id="top">
 
-  <!-- ============ HERO ============ -->
   <section class="hero">
-    <p class="eyebrow">Park(ing) Day · Yeonsu-gu, Songdo</p>
+    <p class="eyebrow" data-ko="파킹데이 · 인천 연수구 송도">Park(ing) Day · Yeonsu-gu, Songdo</p>
     <h1>GO<em>(A)</em>LF</h1>
-    <p class="sub">A mini-golf wish capsule that turns one parking space into a place to pause, play and leave a small goal behind.</p>
-    <p class="hand">Write a goal, take a shot.</p>
+    <p class="sub" data-ko="주차 공간 한 칸을, 잠시 쉬고 놀고 작은 목표를 남기고 가는 자리로 바꾸는 미니골프 소원 캡슐.">A mini-golf wish capsule that turns one parking space into a place to pause, play and leave a small goal behind.</p>
+    <p class="hand" data-ko="목표를 적고, 한 번 쳐보세요.">Write a goal, take a shot.</p>
 
     <div class="hero-card">
       <div class="hero-visual">
@@ -69,294 +74,284 @@
 
     <div class="hero-meta">
       <span class="chip">5 × 2 m</span>
-      <span class="chip">2 Courses</span>
-      <span class="chip">Cardboard Built</span>
-      <span class="chip">1 Day</span>
+      <span class="chip" data-ko="코스 2개">2 Courses</span>
+      <span class="chip" data-ko="골판지 제작">Cardboard Built</span>
+      <span class="chip" data-ko="하루">1 Day</span>
     </div>
   </section>
 
   <div class="marquee" aria-hidden="true">
     <div class="marquee__track">
-      <span>Small goals, brighter streets ✦ Write · Putt · Collect · Share ✦</span>
-      <span>Small goals, brighter streets ✦ Write · Putt · Collect · Share ✦</span>
+      <span data-ko="작은 목표가, 거리를 밝게 ✦ 쓰고 · 치고 · 모으고 · 나누고 ✦">Small goals, brighter streets ✦ Write · Putt · Collect · Share ✦</span>
+      <span data-ko="작은 목표가, 거리를 밝게 ✦ 쓰고 · 치고 · 모으고 · 나누고 ✦">Small goals, brighter streets ✦ Write · Putt · Collect · Share ✦</span>
     </div>
   </div>
 
-  <!-- ============ CONCEPT ============ -->
   <section class="section" id="concept">
     <div class="sec-head rv">
-      <span class="no">01 — CONCEPT</span>
-      <h2>A wish,<br>then a shot.</h2>
+      <span class="no" data-ko="01 — 콘셉트">01 — CONCEPT</span>
+      <h2 data-ko="소원을 적고,&lt;br&gt;한 번 친다.">A wish,<br>then a shot.</h2>
     </div>
-    <p class="lead rv">
+    <p class="lead rv" data-ko="&lt;strong&gt;GO(A)LF&lt;/strong&gt;는 소원 적기와 간단한 미니골프를 합친 프로그램입니다. 참여자는 &lt;strong&gt;개인적인 목표나 소원을 적어&lt;/strong&gt; 가챠 캡슐에 넣고, 그 캡슐을 공 삼아 &lt;strong&gt;미니골프&lt;/strong&gt; 코스를 돕니다.">
       <strong>GO(A)LF</strong> combines a wish activity with a simple mini-golf experience.
       Participants <strong>write down a personal goal or wish</strong>, place it inside a
       gatchapon capsule, and then use that capsule as the ball in the
       <strong>mini-golf</strong> course.
     </p>
-    <p class="lead rv">
+    <p class="lead rv" data-ko="주차 공간은 더 이상 차를 세워 두는 자리가 아니라, 거리 한가운데 잠시 머물다 갈 수 있는 여유가 됩니다. 놀 거리가 있고, 읽을 거리가 있고, 앉을 자리가 있습니다.">
       The parking space stops being storage for a car and becomes a short, generous pause
       in the middle of the street — something to play, something to read, somewhere to sit.
     </p>
 
     <div class="mosaic rv">
       <div class="tile tile--green">
-        <p class="k">Site</p>
-        <p class="v">Yeonsu-gu<br>2nd Office<small>West frontage, Songdo</small></p>
+        <p class="k" data-ko="위치">Site</p>
+        <p class="v" data-ko="연수구&lt;br&gt;제2청사&lt;small&gt;송도, 서측 전면&lt;/small&gt;">Yeonsu-gu<br>2nd Office<small>West frontage, Songdo</small></p>
       </div>
       <div class="tile tile--img">
         <img src="assets/img/sketches.jpg" alt="Hand sketches of the course layout, wish station and seating area." loading="lazy" width="1150" height="516">
       </div>
       <div class="tile tile--card">
-        <p class="k">Footprint</p>
-        <p class="v">5 × 2 m<small>one parking bay</small></p>
+        <p class="k" data-ko="면적">Footprint</p>
+        <p class="v" data-ko="5 × 2 m&lt;small&gt;주차면 1칸&lt;/small&gt;">5 × 2 m<small>one parking bay</small></p>
       </div>
       <div class="tile tile--cream">
-        <p class="k">Budget</p>
-        <p class="v">477,780<small>KRW · ≈ 346.97 USD</small></p>
+        <p class="k" data-ko="예산">Budget</p>
+        <p class="v" data-ko="477,780&lt;small&gt;원 · 약 346.97 USD&lt;/small&gt;">477,780<small>KRW · ≈ 346.97 USD</small></p>
       </div>
       <div class="tile tile--wide">
-        <p class="k">Idea in one line</p>
-        <p class="v">Small Goals,<br>Brighter Streets.</p>
+        <p class="k" data-ko="한 줄 요약">Idea in one line</p>
+        <p class="v" data-ko="작은 목표가,&lt;br&gt;거리를 밝게.">Small Goals,<br>Brighter Streets.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ HOW IT WORKS ============ -->
   <section class="section section--green" id="how">
     <div class="sec-head rv">
-      <span class="no">02 — HOW IT WORKS</span>
-      <h2>Four moves,<br>two minutes.</h2>
-      <p>No instructions needed — the course explains itself.</p>
+      <span class="no" data-ko="02 — 이용 방법">02 — HOW IT WORKS</span>
+      <h2 data-ko="네 단계,&lt;br&gt;2분이면 끝.">Four moves,<br>two minutes.</h2>
+      <p data-ko="설명이 필요 없습니다 — 코스가 알아서 알려줍니다.">No instructions needed — the course explains itself.</p>
     </div>
 
     <ol class="flow rv">
       <li>
         <span class="ic"><img src="assets/img/step-1.jpg" alt="" loading="lazy" width="400" height="400"></span>
-        <div class="tx"><span class="n">01</span><h3>Write</h3>
-          <p>Write a personal goal or wish on a small slip at the wish station.</p></div>
+        <div class="tx"><span class="n">01</span><h3 data-ko="적기">Write</h3>
+          <p data-ko="소원 스테이션에서 작은 쪽지에 개인적인 목표나 소원을 적습니다.">Write a personal goal or wish on a small slip at the wish station.</p></div>
       </li>
       <li>
         <span class="ic"><img src="assets/img/step-2.jpg" alt="" loading="lazy" width="400" height="400"></span>
-        <div class="tx"><span class="n">02</span><h3>Putt</h3>
-          <p>Place the note inside a gatchapon capsule and play it down the course.</p></div>
+        <div class="tx"><span class="n">02</span><h3 data-ko="치기">Putt</h3>
+          <p data-ko="쪽지를 가챠 캡슐에 넣고 코스를 따라 쳐 내려갑니다.">Place the note inside a gatchapon capsule and play it down the course.</p></div>
       </li>
       <li>
         <span class="ic"><img src="assets/img/step-3.jpg" alt="" loading="lazy" width="400" height="400"></span>
-        <div class="tx"><span class="n">03</span><h3>Collect</h3>
-          <p>Complete the course and drop the capsule into the collection box.</p></div>
+        <div class="tx"><span class="n">03</span><h3 data-ko="모으기">Collect</h3>
+          <p data-ko="코스를 끝내고 캡슐을 수거함에 넣습니다.">Complete the course and drop the capsule into the collection box.</p></div>
       </li>
       <li>
         <span class="ic"><img src="assets/img/step-4.jpg" alt="" loading="lazy" width="400" height="400"></span>
-        <div class="tx"><span class="n">04</span><h3>Share</h3>
-          <p>Selected wishes are displayed on the GO(A)LF board for everyone passing by.</p></div>
+        <div class="tx"><span class="n">04</span><h3 data-ko="나누기">Share</h3>
+          <p data-ko="선정된 소원은 GO(A)LF 보드에 붙어 지나가는 모두가 볼 수 있습니다.">Selected wishes are displayed on the GO(A)LF board for everyone passing by.</p></div>
       </li>
     </ol>
   </section>
 
-  <!-- ============ INTERACTION ============ -->
   <section class="section" id="interact">
     <div class="sec-head rv">
-      <span class="no">03 — HOW PEOPLE INTERACT</span>
-      <h2>Play, read,<br>stay a while.</h2>
+      <span class="no" data-ko="03 — 사람들의 이용">03 — HOW PEOPLE INTERACT</span>
+      <h2 data-ko="놀고, 읽고,&lt;br&gt;잠시 머물기.">Play, read,<br>stay a while.</h2>
     </div>
 
     <div class="hscroll rv">
       <article class="hcard">
         <div class="ph"><img src="assets/img/interact-1.jpg" alt="People playing the mini-golf course together." loading="lazy" width="820" height="679"></div>
         <div class="bd">
-          <h3>Play Together</h3>
-          <p>Friends, classmates and passers-by can play the mini-golf course together and enjoy a short break in the city.</p>
+          <h3 data-ko="함께 놀기">Play Together</h3>
+          <p data-ko="친구, 같은 수업 사람들, 지나가던 사람까지 함께 코스를 돌며 도심에서 짧은 쉼을 즐깁니다.">Friends, classmates and passers-by can play the mini-golf course together and enjoy a short break in the city.</p>
         </div>
       </article>
       <article class="hcard">
         <div class="ph"><img src="assets/img/interact-2.jpg" alt="People reading wishes on the GO(A)LF board." loading="lazy" width="820" height="679"></div>
         <div class="bd">
-          <h3>Share &amp; Discover</h3>
-          <p>People read each other's wishes on the GO(A)LF board, find inspiration, and start conversations.</p>
+          <h3 data-ko="나누고 발견하기">Share &amp; Discover</h3>
+          <p data-ko="GO(A)LF 보드에서 서로의 소원을 읽고, 영감을 얻고, 대화를 시작합니다.">People read each other's wishes on the GO(A)LF board, find inspiration, and start conversations.</p>
         </div>
       </article>
       <article class="hcard">
         <div class="ph"><img src="assets/img/interact-3.jpg" alt="People resting on the cardboard benches under the canopy." loading="lazy" width="820" height="679"></div>
         <div class="bd">
-          <h3>Rest &amp; Connect</h3>
-          <p>The shaded seating area offers a space to relax, chat and connect with others in a greener, friendlier street.</p>
+          <h3 data-ko="쉬고 어울리기">Rest &amp; Connect</h3>
+          <p data-ko="그늘진 좌석은 더 푸르고 다정해진 거리에서 쉬고, 이야기하고, 어울릴 자리를 내어 줍니다.">The shaded seating area offers a space to relax, chat and connect with others in a greener, friendlier street.</p>
         </div>
       </article>
     </div>
-    <p class="hint rv">← swipe →</p>
+    <p class="hint rv" data-ko="← 옆으로 넘기세요 →">← swipe →</p>
   </section>
 
-  <!-- ============ DETAILS ============ -->
   <section class="section section--mint" id="details">
     <div class="sec-head rv">
-      <span class="no">04 — DETAILS</span>
-      <h2>Dimensions</h2>
-      <p>Everything fits inside a single 5 × 2 m parking bay.</p>
+      <span class="no" data-ko="04 — 규격">04 — DETAILS</span>
+      <h2 data-ko="치수">Dimensions</h2>
+      <p data-ko="모든 요소가 5 × 2 m 주차면 한 칸 안에 들어갑니다.">Everything fits inside a single 5 × 2 m parking bay.</p>
     </div>
 
     <figure class="poster rv">
       <img src="assets/img/details.jpg" alt="Dimensioned axonometric of the installation inside a 5 by 2 metre bay." loading="lazy" width="1150" height="516">
-      <figcaption>Dimensioned axonometric</figcaption>
+      <figcaption data-ko="치수 표기 투시도">Dimensioned axonometric</figcaption>
     </figure>
 
     <dl class="specs rv">
-      <div><dt>Total footprint</dt><dd>5.0 × 2.0 m</dd></div>
-      <div><dt>Course 1</dt><dd>3.0 × 0.5 m</dd></div>
-      <div><dt>Course 2</dt><dd>3.0 × 0.5 m</dd></div>
-      <div><dt>Goal board height</dt><dd>2.0 m</dd></div>
-      <div><dt>Sunshade canopy</dt><dd>2.0 × 2.0 m</dd></div>
-      <div><dt>Bench height</dt><dd>0.45 m</dd></div>
-      <div><dt>Human reference</dt><dd>1.7 m</dd></div>
+      <div><dt data-ko="전체 면적">Total footprint</dt><dd>5.0 × 2.0 m</dd></div>
+      <div><dt data-ko="코스 1">Course 1</dt><dd>3.0 × 0.5 m</dd></div>
+      <div><dt data-ko="코스 2">Course 2</dt><dd>3.0 × 0.5 m</dd></div>
+      <div><dt data-ko="소원 보드 높이">Goal board height</dt><dd>2.0 m</dd></div>
+      <div><dt data-ko="차양">Sunshade canopy</dt><dd>2.0 × 2.0 m</dd></div>
+      <div><dt data-ko="벤치 높이">Bench height</dt><dd>0.45 m</dd></div>
+      <div><dt data-ko="기준 인체 치수">Human reference</dt><dd>1.7 m</dd></div>
     </dl>
   </section>
 
-  <!-- ============ MAKING ============ -->
   <section class="section" id="making">
     <div class="sec-head rv">
-      <span class="no">05 — MAKING PROCESS</span>
-      <h2>Built from<br>cardboard.</h2>
-      <p>Two sub-assemblies, both cut and glued by hand.</p>
+      <span class="no" data-ko="05 — 제작 과정">05 — MAKING PROCESS</span>
+      <h2 data-ko="골판지로&lt;br&gt;만듭니다.">Built from<br>cardboard.</h2>
+      <p data-ko="두 가지를 손으로 자르고 붙여 만듭니다.">Two sub-assemblies, both cut and glued by hand.</p>
     </div>
 
     <figure class="poster rv">
       <img src="assets/img/slope.jpg" alt="Three steps of the slope: cardboard base, glued fan, combined with the course." loading="lazy" width="1150" height="423">
-      <figcaption>Slope — base · glue &amp; shape · combine</figcaption>
+      <figcaption data-ko="경사 — 바닥 · 붙여 성형 · 코스 결합">Slope — base · glue &amp; shape · combine</figcaption>
     </figure>
 
     <figure class="poster rv">
       <img src="assets/img/chair.jpg" alt="Steps of the cardboard chair: filling a box with rolled tubes, closing it, lining boxes up into a bench." loading="lazy" width="1150" height="471">
-      <figcaption>Chair — fill · close · line up into a bench</figcaption>
+      <figcaption data-ko="의자 — 채우기 · 덮기 · 벤치로 잇기">Chair — fill · close · line up into a bench</figcaption>
     </figure>
 
     <ol class="steps rv">
-      <li><h3>Cardboard base</h3><p>Cut the 0.5 m wide base into small pieces.</p></li>
-      <li><h3>Glue &amp; make slope</h3><p>Fan the pieces out and glue them into a rise.</p></li>
-      <li><h3>Combine with course</h3><p>Lay the putting mat over the slope and join the lane.</p></li>
-      <li><h3>Box into bench</h3><p>Pack boxes with rolled tubes on end, close them, line them up.</p></li>
+      <li><h3 data-ko="골판지 바닥">Cardboard base</h3><p data-ko="0.5 m 폭 바닥을 작은 조각으로 자릅니다.">Cut the 0.5 m wide base into small pieces.</p></li>
+      <li><h3 data-ko="붙여서 경사 만들기">Glue &amp; make slope</h3><p data-ko="조각을 부채꼴로 펼쳐 붙여 경사를 만듭니다.">Fan the pieces out and glue them into a rise.</p></li>
+      <li><h3 data-ko="코스와 결합">Combine with course</h3><p data-ko="경사 위에 퍼팅 매트를 덮고 레인에 잇습니다.">Lay the putting mat over the slope and join the lane.</p></li>
+      <li><h3 data-ko="상자를 벤치로">Box into bench</h3><p data-ko="말아 세운 골판지 심을 상자에 채우고, 덮은 뒤 나란히 잇습니다.">Pack boxes with rolled tubes on end, close them, line them up.</p></li>
     </ol>
   </section>
 
-  <!-- ============ MATERIALS ============ -->
   <section class="section section--cream" id="materials">
     <div class="sec-head rv">
-      <span class="no">06 — MAIN MATERIALS</span>
-      <h2>Nine parts.</h2>
-      <p class="hand-note">Small materials, big fun!</p>
+      <span class="no" data-ko="06 — 주요 재료">06 — MAIN MATERIALS</span>
+      <h2 data-ko="아홉 가지.">Nine parts.</h2>
+      <p class="hand-note" data-ko="작은 재료로, 큰 재미!">Small materials, big fun!</p>
     </div>
 
     <div class="mosaic rv">
-      <div class="tile"><p class="k">01 Cardboard</p><p class="v">21,000<small>A3 · 50–60 sheets</small></p></div>
-      <div class="tile"><p class="k">02 Safe Golf Club</p><p class="v">47,700<small>3 clubs</small></p></div>
-      <div class="tile"><p class="k">03 Plants</p><p class="v">57,500<small>5 plants</small></p></div>
-      <div class="tile"><p class="k">04 Grass Mat</p><p class="v">70,000<small>5 × 2 m, 1 mat</small></p></div>
-      <div class="tile"><p class="k">05 Sunshade</p><p class="v">65,900<small>2 × 2 m, 1 set</small></p></div>
-      <div class="tile"><p class="k">06 Boxes</p><p class="v">30,000<small>7–10 boxes</small></p></div>
-      <div class="tile"><p class="k">07 Sign Board</p><p class="v">45,000<small>1 set</small></p></div>
-      <div class="tile"><p class="k">08 Capsules</p><p class="v">9,900<small>32 mm · 90 pcs</small></p></div>
-      <div class="tile tile--card tile--wide"><p class="k">09 Golf Putting Mat</p><p class="v">130,780<small>3 × 0.5 m · 2 mats</small></p></div>
+      <div class="tile"><p class="k" data-ko="01 골판지">01 Cardboard</p><p class="v" data-ko="21,000&lt;small&gt;A3 · 50~60장&lt;/small&gt;">21,000<small>A3 · 50–60 sheets</small></p></div>
+      <div class="tile"><p class="k" data-ko="02 안전 골프채">02 Safe Golf Club</p><p class="v" data-ko="47,700&lt;small&gt;3개&lt;/small&gt;">47,700<small>3 clubs</small></p></div>
+      <div class="tile"><p class="k" data-ko="03 화분">03 Plants</p><p class="v" data-ko="57,500&lt;small&gt;5개&lt;/small&gt;">57,500<small>5 plants</small></p></div>
+      <div class="tile"><p class="k" data-ko="04 인조 잔디">04 Grass Mat</p><p class="v" data-ko="70,000&lt;small&gt;5 × 2 m, 1장&lt;/small&gt;">70,000<small>5 × 2 m, 1 mat</small></p></div>
+      <div class="tile"><p class="k" data-ko="05 차양">05 Sunshade</p><p class="v" data-ko="65,900&lt;small&gt;2 × 2 m, 1세트&lt;/small&gt;">65,900<small>2 × 2 m, 1 set</small></p></div>
+      <div class="tile"><p class="k" data-ko="06 상자">06 Boxes</p><p class="v" data-ko="30,000&lt;small&gt;7~10개&lt;/small&gt;">30,000<small>7–10 boxes</small></p></div>
+      <div class="tile"><p class="k" data-ko="07 간판">07 Sign Board</p><p class="v" data-ko="45,000&lt;small&gt;1세트&lt;/small&gt;">45,000<small>1 set</small></p></div>
+      <div class="tile"><p class="k" data-ko="08 캡슐">08 Capsules</p><p class="v" data-ko="9,900&lt;small&gt;32 mm · 90개&lt;/small&gt;">9,900<small>32 mm · 90 pcs</small></p></div>
+      <div class="tile tile--card tile--wide"><p class="k" data-ko="09 퍼팅 매트">09 Golf Putting Mat</p><p class="v" data-ko="130,780&lt;small&gt;3 × 0.5 m · 2장&lt;/small&gt;">130,780<small>3 × 0.5 m · 2 mats</small></p></div>
     </div>
 
     <figure class="poster rv">
       <img src="assets/img/materials.jpg" alt="Main materials board from the poster with photos and prices." loading="lazy" width="1400" height="551">
-      <figcaption>Main materials board</figcaption>
+      <figcaption data-ko="주요 재료 보드">Main materials board</figcaption>
     </figure>
   </section>
 
-  <!-- ============ BUDGET ============ -->
   <section class="section" id="budget">
     <div class="sec-head rv">
-      <span class="no">07 — APPROXIMATE BUDGET</span>
-      <h2>Mini golf<br>wish capsule.</h2>
-      <p>All prices in KRW, sourced online.</p>
+      <span class="no" data-ko="07 — 예상 예산">07 — APPROXIMATE BUDGET</span>
+      <h2 data-ko="미니골프&lt;br&gt;소원 캡슐.">Mini golf<br>wish capsule.</h2>
+      <p data-ko="금액은 원화, 온라인 가격 기준입니다.">All prices in KRW, sourced online.</p>
     </div>
 
     <div class="table-wrap rv">
       <table>
         <thead>
-          <tr><th>Item</th><th>Qty</th><th>Total</th></tr>
+          <tr><th data-ko="품목">Item</th><th data-ko="수량">Qty</th><th data-ko="합계">Total</th></tr>
         </thead>
         <tbody>
-          <tr><td><b>Cardboard</b><small>A3, 50–60 sheets</small></td><td>1 set</td><td>21,000</td></tr>
-          <tr><td><b>Artificial Grass Mat</b><small>5 × 2 m</small></td><td>1 mat</td><td>70,000</td></tr>
-          <tr><td><b>Golf Putting Mat</b><small>3 × 0.5 m</small></td><td>2 mats</td><td>130,780</td></tr>
-          <tr><td><b>Safe Golf Club</b><small>2–3 clubs</small></td><td>3 clubs</td><td>47,700</td></tr>
-          <tr><td><b>Sunshade with Poles</b><small>2 × 2 m</small></td><td>1 set</td><td>65,900</td></tr>
-          <tr><td><b>Sign Board</b></td><td>1 set</td><td>45,000</td></tr>
-          <tr><td><b>Plants</b><small>11,500 each</small></td><td>5 plants</td><td>57,500</td></tr>
-          <tr><td><b>Boxes</b><small>7–10 boxes + recycle</small></td><td>7 boxes</td><td>30,000</td></tr>
-          <tr><td><b>Gatchapon Capsules</b><small>32 mm, 90 pcs</small></td><td>1 set</td><td>9,900</td></tr>
+          <tr><td data-ko="&lt;b&gt;골판지&lt;/b&gt;&lt;small&gt;A3, 50~60장&lt;/small&gt;"><b>Cardboard</b><small>A3, 50–60 sheets</small></td><td data-ko="1세트">1 set</td><td>21,000</td></tr>
+          <tr><td data-ko="&lt;b&gt;인조 잔디 매트&lt;/b&gt;&lt;small&gt;5 × 2 m&lt;/small&gt;"><b>Artificial Grass Mat</b><small>5 × 2 m</small></td><td data-ko="1장">1 mat</td><td>70,000</td></tr>
+          <tr><td data-ko="&lt;b&gt;골프 퍼팅 매트&lt;/b&gt;&lt;small&gt;3 × 0.5 m&lt;/small&gt;"><b>Golf Putting Mat</b><small>3 × 0.5 m</small></td><td data-ko="2장">2 mats</td><td>130,780</td></tr>
+          <tr><td data-ko="&lt;b&gt;안전 골프채&lt;/b&gt;&lt;small&gt;2~3개&lt;/small&gt;"><b>Safe Golf Club</b><small>2–3 clubs</small></td><td data-ko="3개">3 clubs</td><td>47,700</td></tr>
+          <tr><td data-ko="&lt;b&gt;차양 + 지주&lt;/b&gt;&lt;small&gt;2 × 2 m&lt;/small&gt;"><b>Sunshade with Poles</b><small>2 × 2 m</small></td><td data-ko="1세트">1 set</td><td>65,900</td></tr>
+          <tr><td data-ko="&lt;b&gt;간판&lt;/b&gt;"><b>Sign Board</b></td><td data-ko="1세트">1 set</td><td>45,000</td></tr>
+          <tr><td data-ko="&lt;b&gt;화분&lt;/b&gt;&lt;small&gt;개당 11,500&lt;/small&gt;"><b>Plants</b><small>11,500 each</small></td><td data-ko="5개">5 plants</td><td>57,500</td></tr>
+          <tr><td data-ko="&lt;b&gt;상자&lt;/b&gt;&lt;small&gt;7~10개 + 재활용&lt;/small&gt;"><b>Boxes</b><small>7–10 boxes + recycle</small></td><td data-ko="7개">7 boxes</td><td>30,000</td></tr>
+          <tr><td data-ko="&lt;b&gt;가챠 캡슐&lt;/b&gt;&lt;small&gt;32 mm, 90개&lt;/small&gt;"><b>Gatchapon Capsules</b><small>32 mm, 90 pcs</small></td><td data-ko="1세트">1 set</td><td>9,900</td></tr>
         </tbody>
         <tfoot>
-          <tr><td>Total</td><td></td><td>477,780</td></tr>
+          <tr><td data-ko="합계">Total</td><td></td><td>477,780</td></tr>
         </tfoot>
       </table>
     </div>
 
     <div class="total-cards rv">
       <div class="total">
-        <p class="k">Total cost</p>
-        <p class="v">477,780<small>KRW ≈ 346.97 USD</small></p>
+        <p class="k" data-ko="총 비용">Total cost</p>
+        <p class="v" data-ko="477,780&lt;small&gt;원 ≈ 346.97 USD&lt;/small&gt;">477,780<small>KRW ≈ 346.97 USD</small></p>
       </div>
       <div class="total alt">
-        <p class="k">Saved for risk &amp; extra work</p>
-        <p class="v">623,820<small>KRW ≈ 466.58 USD</small></p>
+        <p class="k" data-ko="예비비 (리스크 · 추가 작업)">Saved for risk &amp; extra work</p>
+        <p class="v" data-ko="623,820&lt;small&gt;원 ≈ 466.58 USD&lt;/small&gt;">623,820<small>KRW ≈ 466.58 USD</small></p>
       </div>
     </div>
 
     <figure class="poster rv">
-      <img src="assets/img/budget.jpg" alt="The poster's own budget sheet, with item images, totals and the saved contingency." loading="lazy" width="1250" height="1007">
-      <figcaption>Budget sheet</figcaption>
+      <img src="assets/img/budget.jpg" alt="The poster's own budget sheet, with item images and totals." loading="lazy" width="1250" height="1007">
+      <figcaption data-ko="예산표">Budget sheet</figcaption>
     </figure>
 
-    <a class="cta rv" href="https://docs.google.com/document/d/1C57bAPRhw7lZpW-t0zIiSxaUajTN1OhW2i5v278Espc/edit?usp=sharing" target="_blank" rel="noopener">
+    <a class="cta rv" href="https://docs.google.com/document/d/1C57bAPRhw7lZpW-t0zIiSxaUajTN1OhW2i5v278Espc/edit?usp=sharing" target="_blank" rel="noopener" data-ko="재료 목록 보기 ↗">
       Check the material list ↗
     </a>
   </section>
 
-  <!-- ============ INSTALL ============ -->
   <section class="section section--green" id="install">
     <div class="sec-head rv">
-      <span class="no">08 — SITE APPLICATION</span>
-      <h2>Set up<br>in four steps.</h2>
-      <p>From an empty bay to a finished street room.</p>
+      <span class="no" data-ko="08 — 현장 설치">08 — SITE APPLICATION</span>
+      <h2 data-ko="네 단계로&lt;br&gt;설치합니다.">Set up<br>in four steps.</h2>
+      <p data-ko="빈 주차면에서 완성된 거리의 방까지.">From an empty bay to a finished street room.</p>
     </div>
 
     <ol class="steps rv">
-      <li><h3>Lay the base mat</h3><p>Clean the ground and roll out the 5 × 2 m artificial grass mat.</p></li>
-      <li><h3>Install the golf course &amp; wish station</h3><p>Place both courses, the capsule stand and the "write your goal" desk.</p></li>
-      <li><h3>Add plants to define the space</h3><p>Set plants along the edges to separate the room from moving traffic.</p></li>
-      <li><h3>Set up the seating &amp; canopy</h3><p>Install the canopy and cardboard benches for a comfortable sitting area.</p></li>
+      <li><h3 data-ko="바닥 매트 깔기">Lay the base mat</h3><p data-ko="바닥을 치우고 5 × 2 m 인조 잔디를 펼칩니다.">Clean the ground and roll out the 5 × 2 m artificial grass mat.</p></li>
+      <li><h3 data-ko="코스와 소원 스테이션 설치">Install the golf course &amp; wish station</h3><p data-ko="코스 두 개와 캡슐 진열대, 목표를 적는 책상을 놓습니다.">Place both courses, the capsule stand and the "write your goal" desk.</p></li>
+      <li><h3 data-ko="화분으로 영역 만들기">Add plants to define the space</h3><p data-ko="가장자리에 화분을 두어 차도와 공간을 분리합니다.">Set plants along the edges to separate the room from moving traffic.</p></li>
+      <li><h3 data-ko="좌석과 차양 설치">Set up the seating &amp; canopy</h3><p data-ko="차양과 골판지 벤치를 설치해 편히 앉을 자리를 만듭니다.">Install the canopy and cardboard benches for a comfortable sitting area.</p></li>
     </ol>
 
     <figure class="poster rv">
       <img src="assets/img/install.jpg" alt="Four diagrams of the site application process, from the base mat to the finished canopy." loading="lazy" width="1400" height="516">
-      <figcaption>Site application process</figcaption>
+      <figcaption data-ko="현장 설치 과정">Site application process</figcaption>
     </figure>
   </section>
 
-  <!-- ============ POSTERS ============ -->
   <section class="section section--mint" id="posters">
     <div class="sec-head rv">
-      <span class="no">09 — POSTER SHEETS</span>
-      <h2>The boards.</h2>
-      <p>Both sheets as submitted.</p>
+      <span class="no" data-ko="09 — 포스터">09 — POSTER SHEETS</span>
+      <h2 data-ko="제출 포스터.">The boards.</h2>
+      <p data-ko="제출한 두 장 그대로입니다.">Both sheets as submitted.</p>
     </div>
     <figure class="poster rv">
       <img src="assets/img/sheet-01.jpg" alt="Poster sheet 1: concept rendering, details, sketches, slope-making and chair-making process." loading="lazy" width="1500" height="2122">
-      <figcaption>Sheet 01 — concept &amp; process</figcaption>
+      <figcaption data-ko="1면 — 콘셉트와 과정">Sheet 01 — concept &amp; process</figcaption>
     </figure>
     <figure class="poster rv">
       <img src="assets/img/sheet-02.jpg" alt="Poster sheet 2: main materials, approximate budget and site application process." loading="lazy" width="1500" height="2122">
-      <figcaption>Sheet 02 — materials &amp; budget</figcaption>
+      <figcaption data-ko="2면 — 재료와 예산">Sheet 02 — materials &amp; budget</figcaption>
     </figure>
-    <a class="cta ghost rv" href="assets/GOALF-poster.pdf" target="_blank" rel="noopener">Download the poster (PDF) ↓</a>
+    <a class="cta ghost rv" href="assets/GOALF-poster.pdf" target="_blank" rel="noopener" data-ko="포스터 내려받기 (PDF) ↓">Download the poster (PDF) ↓</a>
   </section>
 
-  <!-- ============ QUOTE ============ -->
   <section class="section">
     <div class="quote rv">
-      <p>Small goals,<br>brighter streets.</p>
+      <p data-ko="작은 목표가,&lt;br&gt;거리를 밝게.">Small goals,<br>brighter streets.</p>
       <span>GO(A)LF · Park(ing) Day</span>
     </div>
   </section>
@@ -364,18 +359,18 @@
   <footer class="site-foot" id="about">
     <p class="big">GO<em>(A)</em>LF</p>
     <ul class="foot-links">
-      <li><a href="#concept">Concept</a></li>
-      <li><a href="#how">How It Works</a></li>
-      <li><a href="#interact">Interaction</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#making">Making Process</a></li>
-      <li><a href="#materials">Materials</a></li>
-      <li><a href="#budget">Budget</a></li>
-      <li><a href="#install">Installation</a></li>
-      <li><a href="#posters">Poster Sheets</a></li>
-      <li><a href="#top">Back to top ↑</a></li>
+      <li><a href="#concept" data-ko="콘셉트">Concept</a></li>
+      <li><a href="#how" data-ko="이용 방법">How It Works</a></li>
+      <li><a href="#interact" data-ko="사람들의 이용">Interaction</a></li>
+      <li><a href="#details" data-ko="규격">Details</a></li>
+      <li><a href="#making" data-ko="제작 과정">Making Process</a></li>
+      <li><a href="#materials" data-ko="재료">Materials</a></li>
+      <li><a href="#budget" data-ko="예산">Budget</a></li>
+      <li><a href="#install" data-ko="설치 과정">Installation</a></li>
+      <li><a href="#posters" data-ko="포스터">Poster Sheets</a></li>
+      <li><a href="#top" data-ko="맨 위로 ↑">Back to top ↑</a></li>
     </ul>
-    <p class="foot-meta">
+    <p class="foot-meta" data-ko="유타대학교 — 어반 에콜로지&lt;br&gt;파킹데이 프로젝트 · CMP 4280&lt;br&gt;장소: 인천 연수구 송도, 연수구 제2청사&lt;br&gt;© 2026 GO(A)LF">
       University of Utah — Urban Ecology<br>
       Park(ing) Day Project · CMP 4280<br>
       Site: Yeonsu-gu 2nd Office, Songdo, Incheon<br>

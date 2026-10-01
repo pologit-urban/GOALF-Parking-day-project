@@ -23,7 +23,7 @@ index.html          single page: concept → how it works → interaction →
                     details → making process → materials → budget →
                     installation → poster sheets
 css/style.css       palette + layout (phone-width shell, max 460px)
-js/main.js          drawer nav, scroll reveal, reading-progress bar
+js/main.js          drawer nav, EN/KO switch, scroll reveal, progress bar
 site.webmanifest    name + icons for "add to home screen"
 assets/icon.svg     tab icon (green tile, white golf flag)
 assets/icon-*.png   32px favicon, 180px apple-touch, 512px manifest
@@ -34,6 +34,17 @@ assets/GOALF-poster.pdf   the submitted poster, linked for download
 
 All imagery is rendered straight from the original poster PDF, so the
 drawings stay sharp instead of being photographs of a printed sheet.
+
+## Languages
+
+The page ships in English; every translatable element also carries a
+`data-ko` attribute with the Korean text. `js/main.js` swaps the two,
+remembers the choice in `localStorage`, and sets `<html lang>` so the
+Korean typography rules in the stylesheet apply. First-time visitors
+whose browser is set to Korean get Korean automatically.
+
+To change a Korean string, edit the `data-ko` attribute next to the
+English text — the two always live side by side.
 
 ## Palette
 

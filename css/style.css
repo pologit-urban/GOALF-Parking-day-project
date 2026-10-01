@@ -25,8 +25,8 @@
   --radius:18px;
   --radius-lg:26px;
 
-  --ff-display:"Outfit","Pretendard","Helvetica Neue",Arial,sans-serif;
-  --ff-body:"Outfit","Pretendard","Helvetica Neue",Arial,sans-serif;
+  --ff-display:"Outfit","Noto Sans KR","Pretendard","Helvetica Neue",Arial,sans-serif;
+  --ff-body:"Outfit","Noto Sans KR","Pretendard","Helvetica Neue",Arial,sans-serif;
   --ff-hand:"Caveat","Outfit",cursive;
 }
 
@@ -94,6 +94,27 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
   width:22px;height:22px;border-radius:6px;
 }
 .brand em{font-style:normal;color:var(--green-500)}
+
+.head-right{display:flex;align-items:center;gap:8px}
+
+/* language switch */
+.lang{
+  display:flex;align-items:center;
+  background:var(--green-050);
+  border-radius:999px;
+  padding:2px;
+}
+.lang button{
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:11px;font-weight:700;letter-spacing:.04em;
+  color:var(--ink-soft);
+  line-height:1;
+  transition:background .22s ease,color .22s ease;
+}
+.lang button[aria-pressed="true"]{
+  background:var(--green-500);color:var(--white);
+}
 
 .nav-toggle{
   width:40px;height:40px;
@@ -527,3 +548,33 @@ tfoot td{
     color:var(--green-700);opacity:.55;
   }
 }
+
+/* ---------- Korean typography ---------- */
+html[lang="ko"] body{line-height:1.75}
+html[lang="ko"] .hero h1,
+html[lang="ko"] .site-foot .big,
+html[lang="ko"] .brand{letter-spacing:-.02em}
+html[lang="ko"] .sec-head h2{letter-spacing:-.03em;font-size:28px;line-height:1.22}
+html[lang="ko"] .tile .v{letter-spacing:-.02em;font-size:23px;line-height:1.25}
+html[lang="ko"] .flow h3,
+html[lang="ko"] .steps h3,
+html[lang="ko"] .hcard h3{letter-spacing:-.02em}
+html[lang="ko"] .eyebrow,
+html[lang="ko"] .chip,
+html[lang="ko"] .sec-head .no,
+html[lang="ko"] .hint,
+html[lang="ko"] .nav-foot,
+html[lang="ko"] .quote span{letter-spacing:.04em}
+html[lang="ko"] thead th{letter-spacing:.04em}
+
+/* Caveat has no Hangul — use the body face at a matching weight instead */
+html[lang="ko"] .hand,
+html[lang="ko"] .hand-note,
+html[lang="ko"] .quote p{
+  font-family:var(--ff-body);
+  font-weight:700;
+  letter-spacing:-.03em;
+}
+html[lang="ko"] .hand{font-size:20px;transform:none}
+html[lang="ko"] .hand-note{font-size:18px!important}
+html[lang="ko"] .quote p{font-size:25px;line-height:1.35}
