@@ -1,7 +1,7 @@
 # GO(A)LF — Park(ing) Day Project Site
 
 A mobile-sized (phone-width) one-page site for the **GO(A)LF** Park(ing) Day
-installation, made for **CMP 4280**.
+installation — Urban Ecology, University of Utah (CMP 4280).
 
 GO(A)LF combines a wish activity with a simple mini-golf experience: visitors
 write a personal goal, seal it in a gatchapon capsule, putt it down the course,
@@ -27,7 +27,8 @@ js/main.js          drawer nav, scroll reveal, reading-progress bar
 site.webmanifest    name + icons for "add to home screen"
 assets/icon.svg     tab icon (green tile, white golf flag)
 assets/icon-*.png   32px favicon, 180px apple-touch, 512px manifest
-assets/img/         artwork rendered from the poster PDF at 220 dpi
+assets/img/         artwork rendered from the poster PDF at 400 dpi,
+                    cropped to panel edges detected from the page itself
 assets/GOALF-poster.pdf   the submitted poster, linked for download
 ```
 
