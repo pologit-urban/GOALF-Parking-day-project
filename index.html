@@ -5,10 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GO(A)LF — Park(ing) Day</title>
 <meta name="description" content="GO(A)LF combines a wish activity with a simple mini-golf experience. A Park(ing) Day installation for CMP 4280, Songdo, Yeonsu-gu.">
-<meta name="theme-color" content="#7E9E82">
+<meta name="theme-color" content="#6F9074">
+
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="manifest" href="site.webmanifest">
+
 <meta property="og:title" content="GO(A)LF — Small Goals, Brighter Streets">
 <meta property="og:description" content="Write a goal, take a shot. A mini-golf wish capsule for Park(ing) Day.">
+<meta property="og:image" content="assets/img/hero.jpg">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
@@ -20,9 +29,7 @@
 
 <header class="site-head" id="head">
   <a class="brand" href="#top">
-    <svg class="flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M6 21V4"/><path d="M6 4l11 3.5L6 11"/>
-    </svg>
+    <img class="mark" src="assets/icon.svg" alt="" width="22" height="22">
     GO<em>(A)</em>LF
   </a>
   <button class="nav-toggle" id="navBtn" aria-label="Menu" aria-expanded="false" aria-controls="navPanel">
@@ -34,12 +41,13 @@
   <ol>
     <li><a href="#concept"><span class="idx">01</span>Concept</a></li>
     <li><a href="#how"><span class="idx">02</span>How It Works</a></li>
-    <li><a href="#details"><span class="idx">03</span>Details</a></li>
-    <li><a href="#making"><span class="idx">04</span>Making Process</a></li>
-    <li><a href="#materials"><span class="idx">05</span>Materials</a></li>
-    <li><a href="#budget"><span class="idx">06</span>Budget</a></li>
-    <li><a href="#install"><span class="idx">07</span>Installation</a></li>
-    <li><a href="#posters"><span class="idx">08</span>Poster Sheets</a></li>
+    <li><a href="#interact"><span class="idx">03</span>Interaction</a></li>
+    <li><a href="#details"><span class="idx">04</span>Details</a></li>
+    <li><a href="#making"><span class="idx">05</span>Making Process</a></li>
+    <li><a href="#materials"><span class="idx">06</span>Materials</a></li>
+    <li><a href="#budget"><span class="idx">07</span>Budget</a></li>
+    <li><a href="#install"><span class="idx">08</span>Installation</a></li>
+    <li><a href="#posters"><span class="idx">09</span>Poster Sheets</a></li>
   </ol>
   <p class="nav-foot">CMP 4280 · Park(ing) Day · Songdo</p>
 </nav>
@@ -55,7 +63,7 @@
 
     <div class="hero-card">
       <div class="hero-visual">
-        <img src="assets/crop/hero.jpg" alt="Rendering of the GO(A)LF installation: two mini-golf lanes, a wish station and a shaded seating area on the street.">
+        <img src="assets/img/hero.jpg" alt="Rendering of the GO(A)LF installation: two mini-golf lanes, a wish station and a shaded seating area on the street." fetchpriority="high">
       </div>
     </div>
 
@@ -97,7 +105,7 @@
         <p class="v">Yeonsu-gu<br>2nd Office<small>West frontage, Songdo</small></p>
       </div>
       <div class="tile tile--img">
-        <img src="assets/crop/sketches.jpg" alt="Hand sketches of the course layout, wish station and seating area.">
+        <img src="assets/img/sketches.jpg" alt="Hand sketches of the course layout, wish station and seating area." loading="lazy">
       </div>
       <div class="tile tile--card">
         <p class="k">Footprint</p>
@@ -122,22 +130,26 @@
       <p>No instructions needed — the course explains itself.</p>
     </div>
 
-    <ol class="steps rv">
+    <ol class="flow rv">
       <li>
-        <h3>Write</h3>
-        <p>Write a personal goal or wish on a small slip at the wish station.</p>
+        <span class="ic"><img src="assets/img/step-1.jpg" alt="" loading="lazy"></span>
+        <div class="tx"><span class="n">01</span><h3>Write</h3>
+          <p>Write a personal goal or wish on a small slip at the wish station.</p></div>
       </li>
       <li>
-        <h3>Putt</h3>
-        <p>Place the note inside a gatchapon capsule and play it down the course.</p>
+        <span class="ic"><img src="assets/img/step-2.jpg" alt="" loading="lazy"></span>
+        <div class="tx"><span class="n">02</span><h3>Putt</h3>
+          <p>Place the note inside a gatchapon capsule and play it down the course.</p></div>
       </li>
       <li>
-        <h3>Collect</h3>
-        <p>Complete the course and drop the capsule into the collection box.</p>
+        <span class="ic"><img src="assets/img/step-3.jpg" alt="" loading="lazy"></span>
+        <div class="tx"><span class="n">03</span><h3>Collect</h3>
+          <p>Complete the course and drop the capsule into the collection box.</p></div>
       </li>
       <li>
-        <h3>Share</h3>
-        <p>Selected wishes are displayed on the GO(A)LF board for everyone passing by.</p>
+        <span class="ic"><img src="assets/img/step-4.jpg" alt="" loading="lazy"></span>
+        <div class="tx"><span class="n">04</span><h3>Share</h3>
+          <p>Selected wishes are displayed on the GO(A)LF board for everyone passing by.</p></div>
       </li>
     </ol>
   </section>
@@ -151,27 +163,28 @@
 
     <div class="hscroll rv">
       <article class="hcard">
-        <div class="ph"><img src="assets/crop/int1.jpg" alt="People playing the mini-golf course together."></div>
+        <div class="ph"><img src="assets/img/interact-1.jpg" alt="People playing the mini-golf course together." loading="lazy"></div>
         <div class="bd">
           <h3>Play Together</h3>
           <p>Friends, classmates and passers-by can play the mini-golf course together and enjoy a short break in the city.</p>
         </div>
       </article>
       <article class="hcard">
-        <div class="ph"><img src="assets/crop/int2.jpg" alt="People reading wishes on the GO(A)LF board."></div>
+        <div class="ph"><img src="assets/img/interact-2.jpg" alt="People reading wishes on the GO(A)LF board." loading="lazy"></div>
         <div class="bd">
           <h3>Share &amp; Discover</h3>
           <p>People read each other's wishes on the GO(A)LF board, find inspiration, and start conversations.</p>
         </div>
       </article>
       <article class="hcard">
-        <div class="ph"><img src="assets/crop/int3.jpg" alt="People resting on the cardboard benches under the canopy."></div>
+        <div class="ph"><img src="assets/img/interact-3.jpg" alt="People resting on the cardboard benches under the canopy." loading="lazy"></div>
         <div class="bd">
           <h3>Rest &amp; Connect</h3>
           <p>The shaded seating area offers a space to relax, chat and connect with others in a greener, friendlier street.</p>
         </div>
       </article>
     </div>
+    <p class="hint rv">← swipe →</p>
   </section>
 
   <!-- ============ DETAILS ============ -->
@@ -182,6 +195,11 @@
       <p>Everything fits inside a single 5 × 2 m parking bay.</p>
     </div>
 
+    <figure class="poster rv">
+      <img src="assets/img/details.jpg" alt="Dimensioned axonometric of the installation inside a 5 by 2 metre bay." loading="lazy">
+      <figcaption>Dimensioned axonometric</figcaption>
+    </figure>
+
     <dl class="specs rv">
       <div><dt>Total footprint</dt><dd>5.0 × 2.0 m</dd></div>
       <div><dt>Course 1</dt><dd>3.0 × 0.5 m</dd></div>
@@ -191,11 +209,6 @@
       <div><dt>Bench height</dt><dd>0.45 m</dd></div>
       <div><dt>Human reference</dt><dd>1.7 m</dd></div>
     </dl>
-
-    <figure class="poster rv" style="margin-top:18px">
-      <img src="assets/crop/details.jpg" alt="Dimensioned axonometric of the installation inside a 5 by 2 metre bay.">
-      <figcaption>Dimensioned axonometric</figcaption>
-    </figure>
   </section>
 
   <!-- ============ MAKING ============ -->
@@ -207,12 +220,12 @@
     </div>
 
     <figure class="poster rv">
-      <img src="assets/crop/slope.jpg" alt="Three steps of the slope: cardboard base, glued fan, combined with the course.">
+      <img src="assets/img/slope.jpg" alt="Three steps of the slope: cardboard base, glued fan, combined with the course." loading="lazy">
       <figcaption>Slope — base · glue &amp; shape · combine</figcaption>
     </figure>
 
     <figure class="poster rv">
-      <img src="assets/crop/chair.jpg" alt="Six steps of the cardboard chair: filling a box with rolled tubes, closing it, lining boxes up into a bench.">
+      <img src="assets/img/chair.jpg" alt="Steps of the cardboard chair: filling a box with rolled tubes, closing it, lining boxes up into a bench." loading="lazy">
       <figcaption>Chair — fill · close · line up into a bench</figcaption>
     </figure>
 
@@ -229,7 +242,7 @@
     <div class="sec-head rv">
       <span class="no">06 — MAIN MATERIALS</span>
       <h2>Nine parts.</h2>
-      <p class="hand" style="font-family:var(--ff-hand);font-size:24px;color:var(--green-700);margin-top:8px">Small materials, big fun!</p>
+      <p class="hand-note">Small materials, big fun!</p>
     </div>
 
     <div class="mosaic rv">
@@ -244,8 +257,8 @@
       <div class="tile tile--card tile--wide"><p class="k">09 Golf Putting Mat</p><p class="v">130,780<small>3 × 0.5 m · 2 mats</small></p></div>
     </div>
 
-    <figure class="poster rv" style="margin-top:18px">
-      <img src="assets/crop/materials.jpg" alt="Main materials board from the poster with photos and prices.">
+    <figure class="poster rv">
+      <img src="assets/img/materials.jpg" alt="Main materials board from the poster with photos and prices." loading="lazy">
       <figcaption>Main materials board</figcaption>
     </figure>
   </section>
@@ -291,10 +304,9 @@
       </div>
     </div>
 
-    <figure class="poster rv" style="margin-top:18px">
-      <img src="assets/crop/budget.jpg" alt="Budget table from the poster with item images and totals.">
-      <figcaption>Budget sheet</figcaption>
-    </figure>
+    <a class="cta rv" href="https://docs.google.com/document/d/1C57bAPRhw7lZpW-t0zIiSxaUajTN1OhW2i5v278Espc/edit?usp=sharing" target="_blank" rel="noopener">
+      Check the material list ↗
+    </a>
   </section>
 
   <!-- ============ INSTALL ============ -->
@@ -306,26 +318,14 @@
     </div>
 
     <ol class="steps rv">
-      <li>
-        <h3>Lay the base mat</h3>
-        <p>Clean the ground and roll out the 5 × 2 m artificial grass mat.</p>
-      </li>
-      <li>
-        <h3>Install the golf course &amp; wish station</h3>
-        <p>Place both courses, the capsule stand and the "write your goal" desk.</p>
-      </li>
-      <li>
-        <h3>Add plants to define the space</h3>
-        <p>Set plants along the edges to separate the room from moving traffic.</p>
-      </li>
-      <li>
-        <h3>Set up the seating &amp; canopy</h3>
-        <p>Install the canopy and cardboard benches for a comfortable sitting area.</p>
-      </li>
+      <li><h3>Lay the base mat</h3><p>Clean the ground and roll out the 5 × 2 m artificial grass mat.</p></li>
+      <li><h3>Install the golf course &amp; wish station</h3><p>Place both courses, the capsule stand and the "write your goal" desk.</p></li>
+      <li><h3>Add plants to define the space</h3><p>Set plants along the edges to separate the room from moving traffic.</p></li>
+      <li><h3>Set up the seating &amp; canopy</h3><p>Install the canopy and cardboard benches for a comfortable sitting area.</p></li>
     </ol>
 
-    <figure class="poster rv" style="margin-top:18px">
-      <img src="assets/crop/install.jpg" alt="Four diagrams of the site application process, from the base mat to the finished canopy.">
+    <figure class="poster rv">
+      <img src="assets/img/install.jpg" alt="Four diagrams of the site application process, from the base mat to the finished canopy." loading="lazy">
       <figcaption>Site application process</figcaption>
     </figure>
   </section>
@@ -335,16 +335,17 @@
     <div class="sec-head rv">
       <span class="no">09 — POSTER SHEETS</span>
       <h2>The boards.</h2>
-      <p>Both A1 sheets as submitted.</p>
+      <p>Both sheets as submitted.</p>
     </div>
     <figure class="poster rv">
-      <img src="assets/crop/sheet-01.jpg" alt="Poster sheet 1: concept rendering, details, sketches, slope-making and chair-making process.">
+      <img src="assets/img/sheet-01.jpg" alt="Poster sheet 1: concept rendering, details, sketches, slope-making and chair-making process." loading="lazy">
       <figcaption>Sheet 01 — concept &amp; process</figcaption>
     </figure>
     <figure class="poster rv">
-      <img src="assets/crop/sheet-02.jpg" alt="Poster sheet 2: main materials, approximate budget and site application process.">
+      <img src="assets/img/sheet-02.jpg" alt="Poster sheet 2: main materials, approximate budget and site application process." loading="lazy">
       <figcaption>Sheet 02 — materials &amp; budget</figcaption>
     </figure>
+    <a class="cta ghost rv" href="assets/GOALF-poster.pdf" target="_blank" rel="noopener">Download the poster (PDF) ↓</a>
   </section>
 
   <!-- ============ QUOTE ============ -->
@@ -360,6 +361,7 @@
     <ul class="foot-links">
       <li><a href="#concept">Concept</a></li>
       <li><a href="#how">How It Works</a></li>
+      <li><a href="#interact">Interaction</a></li>
       <li><a href="#details">Details</a></li>
       <li><a href="#making">Making Process</a></li>
       <li><a href="#materials">Materials</a></li>
@@ -369,7 +371,7 @@
       <li><a href="#top">Back to top ↑</a></li>
     </ul>
     <p class="foot-meta">
-      CMP 4280 — Park(ing) Day Project<br>
+      CMP 4280 — Park(ing) Day Project · Group 2<br>
       Site: Yeonsu-gu 2nd Office, Songdo, Incheon<br>
       © 2026 GO(A)LF Team
     </p>

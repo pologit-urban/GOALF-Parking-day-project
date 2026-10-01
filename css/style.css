@@ -90,10 +90,8 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
   align-items:center;
   gap:7px;
 }
-.brand .flag{
-  width:16px;height:16px;
-  display:inline-block;
-  color:var(--green-500);
+.brand .mark{
+  width:22px;height:22px;border-radius:6px;
 }
 .brand em{font-style:normal;color:var(--green-500)}
 
@@ -208,13 +206,9 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
   border-radius:var(--radius-lg);
   overflow:hidden;
   background:var(--green-100);
-  aspect-ratio:16/11;
   position:relative;
 }
-.hero-visual img{
-  width:100%;height:100%;object-fit:cover;object-position:50% 50%;
-  transform:scale(1.02);
-}
+.hero-visual img{width:100%;height:auto;display:block}
 .hero-meta{
   display:flex;flex-wrap:wrap;gap:6px;
   padding:14px var(--gutter) 0;
@@ -331,6 +325,46 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
 }
 .steps p{margin:0;font-size:13.5px;color:var(--ink-soft)}
 .section--green .steps p{color:rgba(255,255,255,.85)}
+
+/* ---------- flow (how it works) ---------- */
+.flow{list-style:none;margin:0;padding:0}
+.flow li{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:16px 0;
+  border-top:1px solid rgba(255,255,255,.3);
+}
+.flow li:last-child{border-bottom:1px solid rgba(255,255,255,.3)}
+.flow .ic{
+  flex:0 0 64px;width:64px;height:64px;
+  border-radius:50%;overflow:hidden;
+  background:var(--cream);
+}
+.flow .ic img{width:100%;height:100%;object-fit:cover}
+.flow .tx{flex:1;min-width:0;padding-top:2px}
+.flow .n{
+  display:inline-block;
+  font-size:10px;font-weight:700;letter-spacing:.16em;
+  opacity:.7;margin-bottom:3px;
+}
+.flow h3{
+  font-family:var(--ff-display);
+  font-weight:700;font-size:17px;margin:0 0 4px;letter-spacing:-.005em;
+}
+.flow p{margin:0;font-size:13.5px;color:rgba(255,255,255,.85)}
+
+/* ---------- misc ---------- */
+.hint{
+  margin:10px 0 0;text-align:center;
+  font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-soft);opacity:.65;
+}
+.hand-note{
+  font-family:var(--ff-hand)!important;
+  font-size:25px!important;
+  color:var(--green-700)!important;
+  margin:8px 0 0!important;
+}
+.cta{margin-top:18px}
 
 /* ---------- spec rows ---------- */
 .specs{display:grid;gap:1px;background:var(--line);border-radius:var(--radius);overflow:hidden}

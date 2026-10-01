@@ -1,0 +1,14 @@
+{
+  "name": "GO(A)LF — Park(ing) Day",
+  "short_name": "GO(A)LF",
+  "description": "A mini-golf wish capsule for Park(ing) Day. CMP 4280.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6F9074",
+  "icons": [
+    { "src": "assets/icon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

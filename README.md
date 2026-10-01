@@ -19,12 +19,20 @@ python3 -m http.server 8000
 ## Structure
 
 ```
-index.html        single page: concept → how it works → details →
-                  making process → materials → budget → installation
-css/style.css     palette + layout (phone-width shell, max 460px)
-js/main.js        drawer nav, scroll reveal, reading-progress bar
-assets/           poster sheets 01 & 02
+index.html          single page: concept → how it works → interaction →
+                    details → making process → materials → budget →
+                    installation → poster sheets
+css/style.css       palette + layout (phone-width shell, max 460px)
+js/main.js          drawer nav, scroll reveal, reading-progress bar
+site.webmanifest    name + icons for "add to home screen"
+assets/icon.svg     tab icon (green tile, white golf flag)
+assets/icon-*.png   32px favicon, 180px apple-touch, 512px manifest
+assets/img/         artwork rendered from the poster PDF at 220 dpi
+assets/GOALF-poster.pdf   the submitted poster, linked for download
 ```
+
+All imagery is rendered straight from the original poster PDF, so the
+drawings stay sharp instead of being photographs of a printed sheet.
 
 ## Palette
 
