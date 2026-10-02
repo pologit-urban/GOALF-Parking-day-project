@@ -23,13 +23,16 @@ index.html          single page: concept → how it works → interaction →
                     details → making process → materials → installation →
                     poster sheets → budget
 css/style.css       palette + layout (phone-width shell, max 460px)
-js/main.js          drawer nav, EN/KO switch, scroll reveal, progress bar
+js/main.js          drawer nav, EN/KO switch, tap-to-enlarge lightbox,
+                    scroll reveal, progress bar
 site.webmanifest    name + icons for "add to home screen"
 assets/icon.svg     tab icon (green tile, white golf flag)
 assets/icon-*.png   32px favicon, 180px apple-touch, 512px manifest
-assets/img/         artwork rendered from the poster PDF at 400 dpi, then
-                    trimmed to each drawing's own content box, so nothing
-                    carries the poster's internal padding
+assets/img/         artwork rendered from the poster PDF at 400 dpi, split
+                    into its individual drawings and trimmed to each one's
+                    own content box — a poster panel is a wide strip and
+                    becomes unreadable at phone width, so the slope (3),
+                    chair (6) and site application (4) are separate steps
 .work/extract.py    the extraction script (untracked); re-run it to rebuild
                     assets/img from the poster PDF
 assets/GOALF-poster.pdf   the submitted poster, linked for download
