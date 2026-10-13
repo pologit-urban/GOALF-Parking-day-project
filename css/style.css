@@ -206,15 +206,23 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
 .hero .eyebrow{margin:18px 0 0}
 .hero .eyebrow span{display:block}
 .hero .eyebrow .org{
-  font-size:13px;font-weight:700;
-  letter-spacing:.08em;text-transform:uppercase;
+  font-size:15px;font-weight:700;
+  letter-spacing:.055em;text-transform:uppercase;
   color:var(--red-ink);
 }
 .hero .eyebrow .prj{
   margin-top:6px;
-  font-size:12px;font-weight:600;
-  letter-spacing:.055em;text-transform:uppercase;
+  font-size:13px;font-weight:600;
+  letter-spacing:.03em;text-transform:uppercase;
   color:var(--ink-soft);
+}
+.hero .eyebrow .org,
+.hero .eyebrow .prj{line-height:1.35;text-wrap:balance}
+
+/* narrow phones: buy the line back with tighter tracking */
+@media (max-width:389px){
+  .hero .eyebrow .org{font-size:14px;letter-spacing:.012em}
+  .hero .eyebrow .prj{font-size:12.5px;letter-spacing:.004em}
 }
 /* the logo carries no plate — it sits straight on the page */
 .hero-logo{margin:0 -6px}
