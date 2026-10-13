@@ -31,7 +31,7 @@
 
   --ff-display:"Outfit","Noto Sans KR","Pretendard","Helvetica Neue",Arial,sans-serif;
   --ff-body:"Outfit","Noto Sans KR","Pretendard","Helvetica Neue",Arial,sans-serif;
-  --ff-hand:"Caveat","Outfit",cursive;
+  --ff-hand:"Outfit","Noto Sans KR","Pretendard","Helvetica Neue",Arial,sans-serif;
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -97,6 +97,7 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
 .brand .mark{
   width:22px;height:22px;border-radius:6px;
 }
+.brand .wordmark{letter-spacing:-.005em}
 .brand em{font-style:normal;color:var(--green-500)}
 .brand .go{color:var(--red-ink)}
 .brand .lf{color:var(--ink)}
@@ -202,24 +203,24 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
   padding:88px var(--gutter) 32px;
   background:var(--white);
 }
-.hero .eyebrow{margin:0 0 16px}
+.hero .eyebrow{margin:18px 0 0}
 .hero .eyebrow span{display:block}
 .hero .eyebrow .org{
-  font-size:11px;font-weight:700;
-  letter-spacing:.13em;text-transform:uppercase;
+  font-size:13px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
   color:var(--red-ink);
 }
 .hero .eyebrow .prj{
-  margin-top:5px;
-  font-size:11px;font-weight:600;
-  letter-spacing:.09em;text-transform:uppercase;
+  margin-top:6px;
+  font-size:12px;font-weight:600;
+  letter-spacing:.055em;text-transform:uppercase;
   color:var(--ink-soft);
 }
 /* the logo carries no plate — it sits straight on the page */
 .hero-logo{margin:0 -6px}
 .hero-logo img{display:block;width:100%;height:auto}
 .hero .sub{
-  margin:20px 0 0;
+  margin:22px 0 0;
   font-size:14.5px;line-height:1.72;
   color:var(--ink-soft);
   max-width:33ch;
@@ -445,10 +446,10 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
   color:var(--ink-soft);opacity:.65;
 }
 .hand-note{
-  font-family:var(--ff-hand)!important;
-  font-size:25px!important;
+  font-size:15px!important;font-weight:700!important;
+  letter-spacing:-.01em;
   color:var(--green-700)!important;
-  margin:8px 0 0!important;
+  margin:10px 0 0!important;
 }
 .cta{margin-top:24px}
 
@@ -549,8 +550,9 @@ tfoot td{
   text-align:center;
 }
 .quote p{
-  font-family:var(--ff-hand);
-  font-size:30px;line-height:1.25;color:var(--green-700);
+  font-family:var(--ff-display);
+  font-weight:800;font-size:27px;line-height:1.2;letter-spacing:-.02em;
+  color:var(--green-700);
   margin:0;
 }
 .quote span{
@@ -644,16 +646,6 @@ html[lang="ko"] .nav-foot p,
 html[lang="ko"] .quote span{letter-spacing:.04em}
 html[lang="ko"] thead th{letter-spacing:.04em}
 
-/* Caveat has no Hangul — use the body face at a matching weight instead */
-html[lang="ko"] .hand,
-html[lang="ko"] .hand-note,
-html[lang="ko"] .quote p{
-  font-family:var(--ff-body);
-  font-weight:700;
-  letter-spacing:-.03em;
-}
-html[lang="ko"] .hand{font-size:20px;transform:none}
-html[lang="ko"] .hand-note{font-size:18px!important}
 html[lang="ko"] .quote p{font-size:25px;line-height:1.35}
 
 /* ---------- tap to enlarge ---------- */
