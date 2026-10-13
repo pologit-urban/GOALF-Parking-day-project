@@ -199,10 +199,10 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
 /* ---------- hero ---------- */
 .hero{
   position:relative;
-  padding:112px var(--gutter) 32px;
+  padding:88px var(--gutter) 32px;
   background:var(--white);
 }
-.hero .eyebrow{margin:0 0 20px}
+.hero .eyebrow{margin:0 0 16px}
 .hero .eyebrow span{display:block}
 .hero .eyebrow .org{
   font-size:11px;font-weight:700;
@@ -215,15 +215,11 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
   letter-spacing:.09em;text-transform:uppercase;
   color:var(--ink-soft);
 }
-.hero-logo{
-  margin:0;
-  border-radius:var(--radius-lg);
-  overflow:hidden;
-  background:var(--plate);
-}
+/* the logo carries no plate — it sits straight on the page */
+.hero-logo{margin:0 -6px}
 .hero-logo img{display:block;width:100%;height:auto}
 .hero .sub{
-  margin:22px 0 0;
+  margin:20px 0 0;
   font-size:14.5px;line-height:1.72;
   color:var(--ink-soft);
   max-width:33ch;
