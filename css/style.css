@@ -4,23 +4,25 @@
    ========================================================= */
 
 :root{
-  /* poster palette */
-  --green-900:#3F5742;
-  --green-700:#5B7A5E;
-  --green-500:#7E9E82;   /* header band green */
-  --green-300:#A8C3A8;
-  --green-100:#CFE0CC;   /* panel mint */
-  --green-050:#E6EFE3;
-
-  --poster:#DFECDE;   /* the poster's own panel green */
+  /* palette taken from the GO(A)LF logo */
+  --red:#E5211C;        /* flag red — fills only */
+  --red-ink:#C21A16;    /* the same red, dark enough for small text */
+  --green-900:#20401F;
+  --green-700:#2D5A30;  /* tree green */
+  --green-500:#3F723F;  /* the (A) green — primary */
+  --green-300:#A3C968;  /* grass */
+  --green-100:#DFECDE;  /* poster artwork green */
+  --green-050:#EDF1E5;
+  --plate:#D8DDC9;      /* the logo's own field */
+  --poster:#DFECDE;
   --paper:#FFFFFF;
-  --cream:#F6F1E4;       /* caption box */
-  --card:#E3C9A3;        /* cardboard */
+  --cream:#F8F2DC;      /* bunker sand */
+  --card:#E3C9A3;       /* cardboard */
   --card-deep:#C9A87C;
 
-  --ink:#24301F;
-  --ink-soft:#5C6B57;
-  --line:#E4E7DE;
+  --ink:#272725;        /* the LF charcoal */
+  --ink-soft:#5B6056;
+  --line:#E3E6DC;
   --white:#FFFFFF;
 
   --gutter:22px;
@@ -96,6 +98,8 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
   width:22px;height:22px;border-radius:6px;
 }
 .brand em{font-style:normal;color:var(--green-500)}
+.brand .go{color:var(--red-ink)}
+.brand .lf{color:var(--ink)}
 
 .head-right{display:flex;align-items:center;gap:8px}
 
@@ -182,9 +186,15 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
   opacity:.7;min-width:20px;
 }
 .nav-foot{
-  font-size:11px;letter-spacing:.12em;text-transform:uppercase;
-  opacity:.8;padding-top:22px;
+  display:flex;align-items:center;gap:12px;
+  padding-top:22px;
 }
+.nav-foot p{
+  margin:0;
+  font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  opacity:.85;
+}
+.nav-foot .org-mark{flex:0 0 40px;width:40px}
 
 /* ---------- hero ---------- */
 .hero{
@@ -197,7 +207,7 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
 .hero .eyebrow .org{
   font-size:11px;font-weight:700;
   letter-spacing:.13em;text-transform:uppercase;
-  color:var(--green-500);
+  color:var(--red-ink);
 }
 .hero .eyebrow .prj{
   margin-top:5px;
@@ -205,23 +215,15 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
   letter-spacing:.09em;text-transform:uppercase;
   color:var(--ink-soft);
 }
-.hero h1{
-  font-family:var(--ff-display);
-  font-weight:800;
-  font-size:clamp(42px,13.2vw,56px);
-  line-height:.95;
-  letter-spacing:-.025em;
+.hero-logo{
   margin:0;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  background:var(--plate);
 }
-.hero h1 em{font-style:normal;color:var(--green-500)}
-.hero .hand{
-  margin:10px 0 0;
-  font-family:var(--ff-hand);
-  font-size:26px;line-height:1.05;
-  color:var(--green-700);
-}
+.hero-logo img{display:block;width:100%;height:auto}
 .hero .sub{
-  margin:20px 0 0;
+  margin:22px 0 0;
   font-size:14.5px;line-height:1.72;
   color:var(--ink-soft);
   max-width:33ch;
@@ -276,7 +278,7 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
 .sec-head{margin:0 0 24px}
 .sec-head .no{
   font-size:10.5px;font-weight:700;letter-spacing:.2em;
-  color:var(--green-500);display:block;margin-bottom:9px;
+  color:var(--red-ink);display:block;margin-bottom:9px;
 }
 .section--green .sec-head .no{color:rgba(255,255,255,.75)}
 .sec-head h2{
@@ -358,7 +360,7 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
 }
 .cap .n{
   display:block;font-size:10px;font-weight:700;letter-spacing:.16em;
-  color:var(--green-500);margin-bottom:5px;
+  color:var(--red-ink);margin-bottom:5px;
 }
 .procs--grid .cap{font-size:11.5px;line-height:1.45;margin-top:8px}
 .section--green .cap{color:rgba(255,255,255,.85)}
@@ -482,7 +484,7 @@ thead th{
 }
 thead th:last-child,tbody td:last-child{text-align:right}
 tbody td{padding:11px 12px;border-top:1px solid var(--line);vertical-align:top}
-tbody tr:nth-child(odd) td{background:#FCFBF7}
+tbody tr:nth-child(odd) td{background:#FBFAF4}
 tbody td b{font-weight:700}
 tbody td small{display:block;font-size:10.5px;color:var(--ink-soft);margin-top:2px}
 tfoot td{
@@ -564,7 +566,7 @@ tfoot td{
 .cta{
   display:inline-flex;align-items:center;gap:9px;
   padding:13px 20px;border-radius:999px;
-  background:var(--ink);color:var(--white);
+  background:var(--red-ink);color:var(--white);
   font-weight:600;font-size:13px;letter-spacing:.02em;
   transition:transform .2s ease, background .2s ease;
 }
@@ -583,10 +585,21 @@ tfoot td{
   letter-spacing:-.02em;margin:0 0 18px;
 }
 .site-foot .big em{font-style:normal;color:var(--green-300)}
+.site-foot .big .go{color:var(--red)}
+.site-foot .big .lf{color:var(--white)}
 .foot-links{list-style:none;margin:0 0 26px;padding:0;
   display:grid;grid-template-columns:1fr 1fr;gap:8px 12px}
 .foot-links a{font-size:12.5px}
-.foot-meta{font-size:11px;letter-spacing:.06em;line-height:1.9;border-top:1px solid rgba(255,255,255,.18);padding-top:16px}
+.foot-org{
+  display:flex;align-items:flex-start;gap:15px;
+  border-top:1px solid rgba(255,255,255,.18);
+  padding-top:18px;
+}
+.foot-meta{margin:0;font-size:11px;letter-spacing:.06em;line-height:1.9}
+.org-mark{
+  display:block;height:auto;
+  width:56px;flex:0 0 56px;
+}
 
 /* ---------- scroll reveal ---------- */
 .rv{opacity:0;transform:translateY(22px);
@@ -631,7 +644,7 @@ html[lang="ko"] .eyebrow,
 html[lang="ko"] .chip,
 html[lang="ko"] .sec-head .no,
 html[lang="ko"] .hint,
-html[lang="ko"] .nav-foot,
+html[lang="ko"] .nav-foot p,
 html[lang="ko"] .quote span{letter-spacing:.04em}
 html[lang="ko"] thead th{letter-spacing:.04em}
 

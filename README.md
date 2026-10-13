@@ -26,7 +26,9 @@ css/style.css       palette + layout (phone-width shell, max 460px)
 js/main.js          drawer nav, EN/KO switch, tap-to-enlarge lightbox,
                     scroll reveal, progress bar
 site.webmanifest    name + icons for "add to home screen"
-assets/icon.svg     tab icon (green tile, white golf flag)
+assets/goalf-logo.png     the project logo (poster design team)
+assets/logo-uofu.png      the university mark, for dark backgrounds only
+assets/icon.svg     tab icon (green tile, red golf flag)
 assets/icon-*.png   32px favicon, 180px apple-touch, 512px manifest
 assets/img/         artwork rendered from the poster PDF at 400 dpi, split
                     into its individual drawings and trimmed to each one's
@@ -54,16 +56,19 @@ English text — the two always live side by side.
 
 ## Palette
 
-Sampled from the project poster.
+Taken from the GO(A)LF logo the poster team made.
 
-| Token | Hex | Use |
+| Token | Hex | From the logo |
 | --- | --- | --- |
-| `--green-500` | `#7E9E82` | header band, accents |
-| `--green-050` | `#E6EFE3` | mint panels |
-| `--cream` | `#F6F1E4` | caption / quote blocks |
-| `--card` | `#E3C9A3` | cardboard tiles |
-| `--ink` | `#24301F` | text, footer |
-| `--white` | `#FFFFFF` | page background |
+| `--red` | `#E5211C` | the flag — fills and the footer wordmark |
+| `--red-ink` | `#C21A16` | the same red, dark enough for small text |
+| `--green-500` | `#3F723F` | the `(A)` — section bands, buttons, primary |
+| `--green-700` | `#2D5A30` | the tree — labels and headings on light |
+| `--green-300` | `#A3C968` | the grass — highlights on dark |
+| `--plate` | `#D8DDC9` | the logo's own field, behind the lockup |
+| `--cream` | `#F8F2DC` | the bunker sand |
+| `--ink` | `#272725` | the `LF` — body text and the footer |
+| `--green-100` | `#DFECDE` | kept: the poster artwork's own green |
 
 Background is white; the layout is capped at 460px so it reads as a phone
 screen on any device.
