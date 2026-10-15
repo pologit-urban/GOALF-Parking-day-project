@@ -20,8 +20,8 @@ python3 -m http.server 8000
 
 ```
 index.html          single page: what is Park(ing) Day → concept →
-                    how it works → interaction → details → materials →
-                    installation → poster sheets → budget
+                    on the day → how it works → interaction → details →
+                    materials → installation → poster sheets → budget
 css/style.css       palette + layout (phone-width shell, max 460px)
 js/main.js          drawer nav, EN/KO switch, tap-to-enlarge lightbox,
                     scroll reveal, progress bar
@@ -35,6 +35,9 @@ assets/img/         artwork rendered from the poster PDF at 400 dpi, split
                     own content box — a poster panel is a wide strip and
                     becomes unreadable at phone width, so the site
                     application diagrams (4) are separate steps
+
+assets/img/onsite-*.jpg are photographs from the day itself and are the
+only images on the page showing the build as it was actually made.
 
 The poster was drawn for an earlier cardboard build. The build is now a
 wood course and frame with plastic box seating, so the cardboard
