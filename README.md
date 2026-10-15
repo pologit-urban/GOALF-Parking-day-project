@@ -20,8 +20,8 @@ python3 -m http.server 8000
 
 ```
 index.html          single page: concept → how it works → interaction →
-                    details → making process → materials → installation →
-                    poster sheets → budget
+                    details → materials → installation → poster sheets →
+                    budget
 css/style.css       palette + layout (phone-width shell, max 460px)
 js/main.js          drawer nav, EN/KO switch, tap-to-enlarge lightbox,
                     scroll reveal, progress bar
@@ -33,8 +33,13 @@ assets/icon-*.png   32px favicon, 180px apple-touch, 512px manifest
 assets/img/         artwork rendered from the poster PDF at 400 dpi, split
                     into its individual drawings and trimmed to each one's
                     own content box — a poster panel is a wide strip and
-                    becomes unreadable at phone width, so the slope (3),
-                    chair (6) and site application (4) are separate steps
+                    becomes unreadable at phone width, so the site
+                    application diagrams (4) are separate steps
+
+The poster was drawn for an earlier cardboard build. The build is now a
+wood course and frame with plastic box seating, so the cardboard
+making-process drawings have been dropped from the page; the renderings
+and the two poster sheets still show the earlier version.
 .work/extract.py    the extraction script (untracked); re-run it to rebuild
                     assets/img from the poster PDF
 assets/GOALF-poster.pdf   the submitted poster, linked for download
