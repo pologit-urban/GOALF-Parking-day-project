@@ -279,6 +279,7 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
 .section--mint{background:var(--green-050)}
 .section--green{background:var(--green-500);color:var(--white)}
 .section--cream{background:var(--cream)}
+.section--plate{background:var(--plate)}
 
 .sec-head{margin:0 0 24px}
 .sec-head .no{
