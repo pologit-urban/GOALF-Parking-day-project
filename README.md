@@ -20,8 +20,8 @@ python3 -m http.server 8000
 
 ```
 index.html          single page: what is Park(ing) Day → concept →
-                    on the day → how it works → interaction → details →
-                    materials → installation → poster sheets → budget
+                    on site → how it works → interaction → details →
+                    materials → installation → poster sheets
 css/style.css       palette + layout (phone-width shell, max 460px)
 js/main.js          drawer nav, EN/KO switch, tap-to-enlarge lightbox,
                     scroll reveal, progress bar
