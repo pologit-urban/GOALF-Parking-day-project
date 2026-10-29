@@ -205,14 +205,20 @@ def main(argv: list[str] | None = None) -> int:
 
     streets = arterials = None
     if not args.no_streets:
-        streets = fetch(
-            "streets",
-            lambda b: ox.graph_to_gdfs(ox.graph_from_bbox(b, network_type="drive", retain_all=True), nodes=False),
-            bbox,
+        # A full drive network is more than a public Overpass mirror will serve
+        # for this bbox, and residential streets are noise at this scale -- the
+        # grid only has to place the sites. Tertiary and up is one light query.
+        roads = subset(
+            fetch("roads", ox.features_from_bbox, bbox,
+                  tags={"highway": ["motorway", "trunk", "primary", "secondary", "tertiary",
+                                    "motorway_link", "trunk_link", "primary_link", "secondary_link"]}),
+            ["LineString", "MultiLineString"],
         )
-        if streets is not None and "highway" in streets.columns:
-            big = streets["highway"].astype(str).str.contains("motorway|trunk|primary|secondary")
-            arterials, streets = streets[big], streets[~big]
+        if roads is not None:
+            big = roads["highway"].astype(str).str.contains("motorway|trunk|primary")
+            arterials, streets = roads[big], roads[~big]
+            arterials = arterials if not arterials.empty else None
+            streets = streets if not streets.empty else None
 
     aspect = 1.0 / math.cos(math.radians((SOUTH + NORTH) / 2.0))
     map_ratio = ((NORTH - SOUTH) * aspect) / (EAST - WEST)
