@@ -40,7 +40,8 @@ SITES = [
         "lon": -111.8877012,
         "name": "City Creek Park",
         "year": "1995",
-        "label_offset": (0.004, 0.0035),
+        "label_offset": (-0.004, 0.0040),
+        "ha": "right",
         "bullets": [
             "Canyon Road, below Memory Grove",
             "Creek piped since the early 1900s",
@@ -276,7 +277,7 @@ def main(argv: list[str] | None = None) -> int:
         ax.text(
             s["lon"] + dx, s["lat"] + dy, f"{s['name']}\n{s['year']}",
             fontsize=10, fontweight="bold", color=C["text"],
-            ha="left", va="center", zorder=16, linespacing=1.35,
+            ha=s.get("ha", "left"), va="center", zorder=16, linespacing=1.35,
             bbox=dict(boxstyle="round,pad=0.32", facecolor="white",
                       edgecolor=C["box_edge"], linewidth=0.6, alpha=0.93),
         )
@@ -306,6 +307,8 @@ def main(argv: list[str] | None = None) -> int:
         sp.set_linewidth(0.8)
     ax.set_xticks([])
     ax.set_yticks([])
+    ax.set_xlabel("")
+    ax.set_ylabel("")
 
     fig.text(0.035, 1 - 0.30 / fig_h, args.title, ha="left", va="top",
              fontsize=17, fontweight="bold", color=C["text"])
