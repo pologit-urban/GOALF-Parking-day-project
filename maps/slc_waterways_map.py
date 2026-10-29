@@ -16,6 +16,7 @@ a mirror with --overpass-url or the OVERPASS_URL environment variable.
 from __future__ import annotations
 
 import argparse
+import math
 import os
 import sys
 from pathlib import Path
@@ -68,7 +69,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument("--place", default="Salt Lake City, Utah, USA", help="place to geocode for the map extent")
     p.add_argument("--theme", choices=sorted(THEMES), default="dark", help="colour theme (default: dark)")
     p.add_argument("--dpi", type=int, default=300, help="PNG resolution (default: 300)")
-    p.add_argument("--size", type=float, default=11.0, help="figure width/height in inches (default: 11)")
+    p.add_argument("--width", type=float, default=16.0, help="figure width in inches (default: 16)")
     p.add_argument("--no-streets", action="store_true", help="skip the faint street underlay")
     p.add_argument("--no-legend", action="store_true", help="skip the legend")
     p.add_argument("--title", default="Salt Lake City", help="map title")
@@ -164,8 +165,19 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     theme = THEMES[args.theme]
+
+    # A degree of longitude is cos(latitude) as wide as a degree of latitude, so
+    # plotting raw lat/lon on equal axes stretches the map east-west. Scaling the
+    # y-axis by 1/cos(lat) restores the true proportions, and the figure is then
+    # sized to match -- otherwise a wide city like Salt Lake sits in a square
+    # canvas with empty bands above and below it.
+    west, south, east, north = polygon.bounds
+    aspect = 1.0 / math.cos(math.radians((south + north) / 2.0))
+    map_ratio = ((north - south) * aspect) / (east - west)
+    fig_height = args.width * map_ratio + 2.2  # headroom for title and caption
+
     print(f"Rendering ({args.theme} theme) ...")
-    fig, ax = plt.subplots(figsize=(args.size, args.size), facecolor=theme["bg"])
+    fig, ax = plt.subplots(figsize=(args.width, fig_height), facecolor=theme["bg"])
     ax.set_facecolor(theme["bg"])
 
     gpd.GeoSeries([polygon], crs=boundary.crs).boundary.plot(
@@ -192,32 +204,45 @@ def main(argv: list[str] | None = None) -> int:
             if values is None:
                 break
 
-    ax.set_xlim(polygon.bounds[0], polygon.bounds[2])
-    ax.set_ylim(polygon.bounds[1], polygon.bounds[3])
-    ax.set_aspect("equal")
+    pad_x = (east - west) * 0.02
+    pad_y = (north - south) * 0.02
+    ax.set_xlim(west - pad_x, east + pad_x)
+    ax.set_ylim(south - pad_y, north + pad_y)
+    ax.set_aspect(aspect)
     ax.set_axis_off()
 
+    line = 0.34 / fig_height  # one text line as a fraction of figure height
     if args.title:
-        fig.text(0.5, 0.955, args.title, ha="center", va="top", color=theme["text"], fontsize=26, fontweight="600")
+        fig.text(
+            0.5, 1 - line, args.title, ha="center", va="top",
+            color=theme["text"], fontsize=28, fontweight="bold",
+        )
     if args.subtitle:
-        fig.text(0.5, 0.915, args.subtitle, ha="center", va="top", color=theme["subtext"], fontsize=11)
+        fig.text(
+            0.5, 1 - 2.35 * line, args.subtitle, ha="center", va="top",
+            color=theme["subtext"], fontsize=12,
+        )
     fig.text(
-        0.5, 0.045, "Data: OpenStreetMap contributors (ODbL)", ha="center", color=theme["subtext"], fontsize=8
+        0.5, 0.6 * line, "Data: OpenStreetMap contributors (ODbL)",
+        ha="center", va="bottom", color=theme["subtext"], fontsize=9,
     )
 
     if drawn and not args.no_legend:
         handles = [Line2D([0], [0], color=c, lw=max(w, 1.4), label=lbl) for lbl, w, c in drawn]
-        legend = ax.legend(
+        legend = fig.legend(
             handles=handles,
-            loc="lower left",
+            loc="lower center",
+            bbox_to_anchor=(0.5, 1.5 * line),
+            ncol=len(handles),
             frameon=False,
-            fontsize=9,
+            fontsize=10,
             labelcolor=theme["text"],
-            handlelength=2.4,
+            handlelength=2.2,
+            columnspacing=2.4,
         )
         legend.set_zorder(5)
 
-    fig.subplots_adjust(left=0.04, right=0.96, top=0.89, bottom=0.08)
+    fig.subplots_adjust(left=0.03, right=0.97, top=1 - 3.1 * line, bottom=2.9 * line)
 
     args.outdir.mkdir(parents=True, exist_ok=True)
     svg_path = args.outdir / f"{args.basename}.svg"
