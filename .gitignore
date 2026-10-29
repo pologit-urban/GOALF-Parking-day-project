@@ -3,3 +3,7 @@ Thumbs.db
 node_modules/
 *.log
 .work/
+maps/out/
+__pycache__/
+.cache/
+maps/cache/
