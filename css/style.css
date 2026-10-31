@@ -563,6 +563,25 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
   padding-top:18px;
 }
 .foot-meta{margin:0;font-size:11px;letter-spacing:.06em;line-height:1.9}
+
+/* ---------- footer credits ---------- */
+.credits{
+  margin:0 0 22px;
+  border-top:1px solid rgba(255,255,255,.18);
+  padding-top:18px;
+}
+.credits dt{
+  font-size:9.5px;font-weight:700;
+  letter-spacing:.17em;text-transform:uppercase;
+  color:var(--green-300);
+  margin:0 0 5px;
+}
+.credits dd{
+  margin:0 0 15px;
+  font-size:12.5px;line-height:1.75;
+  color:rgba(255,255,255,.88);
+}
+.credits dd:last-child{margin-bottom:0}
 .org-mark{
   display:block;height:auto;
   width:56px;flex:0 0 56px;
