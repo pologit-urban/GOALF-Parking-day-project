@@ -564,6 +564,15 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
 }
 .foot-meta{margin:0;font-size:11px;letter-spacing:.06em;line-height:1.9}
 
+/* ---------- footer team photo ---------- */
+.foot-photo{margin:0 0 20px;background:rgba(255,255,255,.06)}
+.foot-photo figcaption{
+  line-height:1.6;
+  padding:11px 14px 12px;
+  font-size:11px;letter-spacing:.09em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);
+}
+
 /* ---------- footer credits ---------- */
 .credits{
   margin:0 0 22px;
