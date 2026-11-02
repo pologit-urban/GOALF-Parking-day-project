@@ -11,7 +11,7 @@
 
   /* ---------- language ---------- */
   var STORE = 'goalf-lang';
-  var TITLES = { en: 'GO(A)LF — Park(ing) Day', ko: 'GO(A)LF — 파킹데이' };
+  var TITLES = { en: 'GO(A)LF — Write a goal, take a shot.', ko: 'GO(A)LF — 목표를 적고, 한 번 쳐보세요' };
   var nodes = document.querySelectorAll('[data-ko]');
 
   // keep the English markup as authored, so switching back is lossless
