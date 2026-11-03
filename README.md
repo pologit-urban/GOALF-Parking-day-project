@@ -3,8 +3,9 @@
 A mobile-sized (phone-width) one-page site for the **GO(A)LF** Park(ing) Day
 installation — Urban Ecology and Planning, University of Utah
 (CMP 4280-301). The project is its own thing, inspired by Park(ing) Day
-rather than run on it: the course stood for fourteen days, 15-29
-October, in front of the Yeonsu-gu 2nd Office.
+rather than run on it: the course stood for one week, 15-21 October,
+on street space in front of the Yeonsu-gu 2nd Office. It was not a
+parking bay.
 
 GO(A)LF combines a wish activity with a simple mini-golf experience: visitors
 write a personal goal, seal it in a gatchapon capsule, putt it down the course,
@@ -39,10 +40,16 @@ assets/img/         artwork rendered from the poster PDF at 400 dpi, split
                     becomes unreadable at phone width, so the site
                     application diagrams (4) are separate steps
 
-assets/img/onsite-*.jpg and wind-*.jpg are photographs from the run
-itself and are the only images on the page showing the build as it was
-actually made. The run finished on 29 October, so the page speaks about
-it in the past.
+assets/img/onsite-*.jpg, people-*.jpg and wind-*.jpg are photographs
+from the run itself and are the only images on the page showing the
+build as it was actually made. The hero is one of them, not a
+rendering. The run finished on 21 October, so the page speaks about it
+in the past.
+
+The poster drew two 3 m lanes; one was built. assets/img/render.jpg
+(the poster rendering) therefore sits in section 02 next to the
+sentence saying so, and a note above the installation diagrams in
+section 03 says the same, because those drawings also show two.
 
 The poster was drawn for an earlier cardboard build. The build is now a
 wood course and frame with plastic box seating, so the cardboard
