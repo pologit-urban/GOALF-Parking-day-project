@@ -630,7 +630,7 @@ body.nav-open .nav-panel li:nth-child(8){transition-delay:.53s}
 @media (min-width:900px){
   body{background:var(--green-050)}
   body::before{
-    content:"GO(A)LF · PARK(ING) DAY · UNIVERSITY OF UTAH URBAN ECOLOGY";
+    content:"GO(A)LF · PARK(ING) DAY · UNIVERSITY OF UTAH URBAN ECOLOGY & PLANNING";
     position:fixed;left:30px;bottom:34px;
     transform:rotate(-90deg);transform-origin:left bottom;
     font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;

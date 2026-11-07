@@ -1,7 +1,7 @@
 # GO(A)LF — Park(ing) Day Project Site
 
 A mobile-sized (phone-width) one-page site for the **GO(A)LF** Park(ing) Day
-installation — Urban Ecology and Planning, University of Utah
+installation — Urban Ecology & Planning, University of Utah
 (CMP 4280-301). The project is its own thing, inspired by Park(ing) Day
 rather than run on it: the course stood for one week, 15-21 October,
 on street space in front of the Yeonsu-gu 2nd Office. It was not a
